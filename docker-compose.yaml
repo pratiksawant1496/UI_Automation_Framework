@@ -39,3 +39,9 @@ services:
       - SE_EVENT_BUS_SUBSCRIBE_PORT=4443
     deploy:
       replicas: 3
+    # -------------------
+    #network_name
+networks:
+  default:
+    external:
+      name: jenkins-grid-net
