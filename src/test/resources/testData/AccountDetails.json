@@ -1,0 +1,15 @@
+{
+  "firstName": "prat",
+  "lastName": "saw",
+  "day": "1",
+  "month": "1",
+  "year": "1990",
+  "company": "bitwise",
+  "address1": "1234 baner",
+  "address2": "Most",
+  "country": "India",
+  "state": "maharashtra",
+  "city": "pune",
+  "zipcode": "411111",
+  "mobileNumber": "9876543210"
+}
