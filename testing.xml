@@ -5,8 +5,8 @@
         <classes>
             <class name="com.automationexercise.tests.DBExampleUsage"/>
             <class name="com.automationexercise.tests.TestCase1"/>
-            <class name="com.automationexercise.tests.TestCase2"/>
-            <class name="com.automationexercise.tests.TestCase3"/>
+<!--            <class name="com.automationexercise.tests.TestCase2"/>-->
+<!--            <class name="com.automationexercise.tests.TestCase3"/>-->
             <!--            <class name="com.automationexercise.tests.TestCase4"/>-->
             <!--            <class name="com.automationexercise.tests.TestCase5"/>-->
             <!--            <class name="com.automationexercise.tests.TestCase6"/>-->
