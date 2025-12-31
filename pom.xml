@@ -16,7 +16,7 @@
         <selenium-version>4.39.0</selenium-version>
         <testng-version>7.7.1</testng-version>
         <ashot-version>1.5.4</ashot-version>
-        <allure-testng-version>2.21.0</allure-testng-version>
+        <allure-testng-version>2.29.0</allure-testng-version>
         <log4j-version>2.20.0</log4j-version>
         <extentreports-version>5.0.9</extentreports-version>
         <maven-surefire-plugin-version>3.0.0</maven-surefire-plugin-version>
@@ -45,12 +45,12 @@
             <version>${allure-testng-version}</version>
         </dependency>
         <!-- Allure Commons (core support for attachments, steps, etc.) -->
-        <dependency>
-            <groupId>io.qameta.allure</groupId>
-            <artifactId>allure-java-commons</artifactId>
-            <version>2.29.0</version>
-            <scope>test</scope>
-        </dependency>
+<!--        <dependency>-->
+<!--            <groupId>io.qameta.allure</groupId>-->
+<!--            <artifactId>allure-java-commons</artifactId>-->
+<!--            <version>2.29.0</version>-->
+<!--            <scope>test</scope>-->
+<!--        </dependency>-->
         <dependency>
             <groupId>org.apache.logging.log4j</groupId>
             <artifactId>log4j-core</artifactId>
@@ -91,12 +91,12 @@
             <artifactId>poi-ooxml</artifactId>
             <version>5.2.3</version>
         </dependency>
-        <dependency>
-            <groupId>io.qameta.allure</groupId>
-            <artifactId>allure-commandline</artifactId>
-            <version>2.21.0</version>
-            <type>pom</type>
-        </dependency>
+<!--        <dependency>-->
+<!--            <groupId>io.qameta.allure</groupId>-->
+<!--            <artifactId>allure-commandline</artifactId>-->
+<!--            <version>2.21.0</version>-->
+<!--            <type>pom</type>-->
+<!--        </dependency>-->
         <dependency>
             <groupId>org.aspectj</groupId>
             <artifactId>aspectjweaver</artifactId>
@@ -124,6 +124,12 @@
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
             <version>8.0.33</version>
+        </dependency>
+        <dependency>
+            <groupId>org.jetbrains</groupId>
+            <artifactId>annotations</artifactId>
+            <version>15.0</version>
+            <scope>test</scope>
         </dependency>
 
     </dependencies>

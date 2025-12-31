@@ -2,6 +2,7 @@ package com.automationexercise.pages;
 
 import com.automationexercise.tests.TestBasic;
 import com.automationexercise.utils.JSONReader;
+import com.automationexercise.utils.ScreenshotUtils;
 import com.automationexercise.utils.Util;
 import org.json.simple.parser.ParseException;
 import org.openqa.selenium.WebDriver;
@@ -105,6 +106,7 @@ public class EnterAccountInformationPage extends TestBasic {
         cityInput.sendKeys(JSONReader.accountDetails("city"));
         zipcodeInput.sendKeys(JSONReader.accountDetails("zipcode"));
         mobileNumberInput.sendKeys(JSONReader.accountDetails("mobileNumber"));
+        ScreenshotUtils.captureScreenshot("EnterAccountInformationPage details filled");
         createAccountButton.click();
         return new AccountCreatedPage(driver);
     }

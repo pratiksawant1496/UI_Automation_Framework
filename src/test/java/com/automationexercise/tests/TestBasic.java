@@ -5,14 +5,9 @@ import com.automationexercise.utils.PropertiesLoader;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.Listeners;
 
 import java.io.IOException;
 
-@Listeners({
-        com.automationexercise.listeners.TestListener.class,
-        com.automationexercise.listeners.RetryListener.class
-})
 public class TestBasic {
 
     protected static ThreadLocal<WebDriver> tdriver = new ThreadLocal<>();
@@ -29,9 +24,12 @@ public class TestBasic {
         getDriver().get(url);
     }
 
-    @AfterMethod
+    @AfterMethod(alwaysRun = true)
     public void tearDown() {
-        getDriver().quit();
-        tdriver.remove();
+        WebDriver driver = getDriver();
+        if (driver != null) {
+            driver.quit();
+            tdriver.remove();
+        }
     }
 }
