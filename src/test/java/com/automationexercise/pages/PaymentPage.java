@@ -1,11 +1,11 @@
 package com.automationexercise.pages;
 
 import com.automationexercise.utils.SeleniumHelper;
+import com.automationexercise.utils.excelUtils;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import com.automationexercise.utils.ExcelReader;
 
 import java.io.IOException;
 import java.util.Map;
@@ -52,7 +52,7 @@ public class PaymentPage {
 
     public PaymentPage fillPaymentDetails() throws IOException {
         //adding data from Excel file
-        Map<String, String> paymentData = ExcelReader.paymentDetails(1); // row 1
+        Map<String, String> paymentData = excelUtils.paymentDetails(1);
         System.out.println("Name: " + paymentData.get("nameOnCard"));
         System.out.println("cardNumber: " + paymentData.get("cardNumber"));
         System.out.println("CVV: " + paymentData.get("CVV"));
