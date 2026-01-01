@@ -1,7 +1,6 @@
 package com.automationexercise.pages;
 
 import com.automationexercise.utils.ExcelReader;
-import com.automationexercise.utils.JSONReader;
 import com.automationexercise.utils.SeleniumHelper;
 import org.json.simple.parser.ParseException;
 import org.openqa.selenium.WebDriver;
@@ -62,7 +61,7 @@ public class PaymentPage {
 //    }
 
 
-    public PaymentPage fillPaymentDetails() throws IOException, ParseException {
+    public PaymentPage fillPaymentDetails() throws IOException {
         //adding data from Excel file
         Map<String, String> paymentData = ExcelReader.paymentDetails(1); // row 1
         System.out.println("Name: " + paymentData.get("nameOnCard"));
