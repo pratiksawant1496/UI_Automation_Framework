@@ -1,12 +1,11 @@
 package com.automationexercise.pages;
 
-import com.automationexercise.utils.ExcelReader;
 import com.automationexercise.utils.SeleniumHelper;
-import org.json.simple.parser.ParseException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import com.automationexercise.utils.ExcelReader;
 
 import java.io.IOException;
 import java.util.Map;
@@ -49,16 +48,6 @@ public class PaymentPage {
         PageFactory.initElements(driver, this);
         this.driver = driver;
     }
-
-//    public PaymentPage fillPaymentDetails() throws IOException, ParseException {
-//        nameOnCardInput.sendKeys(JSONReader.paymentDetails("nameOnCard"));
-//        cardNumberInput.sendKeys(JSONReader.paymentDetails("cardNumber"));
-//        cvcInput.sendKeys(JSONReader.paymentDetails("cvc"));
-//        expirationMonthInput.sendKeys(JSONReader.paymentDetails("expirationMonth"));
-//        expirationYearInput.sendKeys(JSONReader.paymentDetails("expirationYear"));
-//        payAndConfirmOrderButton.click();
-//        return this;
-//    }
 
 
     public PaymentPage fillPaymentDetails() throws IOException {
