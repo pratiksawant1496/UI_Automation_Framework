@@ -20,14 +20,10 @@ public class DBUtils {
     private static final String CA_CERT ;
 
     static {
-        try {
-            DB_URL = PropertiesLoader.loadProperty("db.url");
-            DB_USER = PropertiesLoader.loadProperty("db.username");
-            DB_PASS = PropertiesLoader.loadProperty("db.password");
-            CA_CERT = PropertiesLoader.loadProperty("db.caCert");
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
+        DB_URL = PropertiesLoader.loadProperty("db.url");
+        DB_USER = PropertiesLoader.loadProperty("db.username");
+        DB_PASS = PropertiesLoader.loadProperty("db.password");
+        CA_CERT = PropertiesLoader.loadProperty("db.caCert");
     }
 
     public static boolean validateUser(String username, String password) {

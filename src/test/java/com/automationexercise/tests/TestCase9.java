@@ -16,11 +16,7 @@ public class TestCase9 extends TestBasic {
     static String search;
 
     static {
-        try {
-            search = PropertiesLoader.loadProperty("search.product.input");
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
+        search = PropertiesLoader.loadProperty("search.product.input");
     }
 
     @Test(description = "Test Case 9: Search Product")
