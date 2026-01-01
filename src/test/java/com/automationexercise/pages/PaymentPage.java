@@ -1,5 +1,6 @@
 package com.automationexercise.pages;
 
+import com.automationexercise.utils.ExcelReader;
 import com.automationexercise.utils.JSONReader;
 import com.automationexercise.utils.SeleniumHelper;
 import org.json.simple.parser.ParseException;
@@ -9,6 +10,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import java.io.IOException;
+import java.util.Map;
 
 public class PaymentPage {
 
@@ -49,14 +51,34 @@ public class PaymentPage {
         this.driver = driver;
     }
 
+//    public PaymentPage fillPaymentDetails() throws IOException, ParseException {
+//        nameOnCardInput.sendKeys(JSONReader.paymentDetails("nameOnCard"));
+//        cardNumberInput.sendKeys(JSONReader.paymentDetails("cardNumber"));
+//        cvcInput.sendKeys(JSONReader.paymentDetails("cvc"));
+//        expirationMonthInput.sendKeys(JSONReader.paymentDetails("expirationMonth"));
+//        expirationYearInput.sendKeys(JSONReader.paymentDetails("expirationYear"));
+//        payAndConfirmOrderButton.click();
+//        return this;
+//    }
+
+
     public PaymentPage fillPaymentDetails() throws IOException, ParseException {
-        nameOnCardInput.sendKeys(JSONReader.paymentDetails("nameOnCard"));
-        cardNumberInput.sendKeys(JSONReader.paymentDetails("cardNumber"));
-        cvcInput.sendKeys(JSONReader.paymentDetails("cvc"));
-        expirationMonthInput.sendKeys(JSONReader.paymentDetails("expirationMonth"));
-        expirationYearInput.sendKeys(JSONReader.paymentDetails("expirationYear"));
+        //adding data from Excel file
+        Map<String, String> paymentData = ExcelReader.paymentDetails(1); // row 1
+        System.out.println("Name: " + paymentData.get("nameOnCard"));
+        System.out.println("cardNumber: " + paymentData.get("cardNumber"));
+        System.out.println("CVV: " + paymentData.get("CVV"));
+        System.out.println("expirationMonth: " + paymentData.get("expirationMonth"));
+        System.out.println("expirationYear: " + paymentData.get("expirationYear"));
+
+        nameOnCardInput.sendKeys(paymentData.get("nameOnCard"));
+        cardNumberInput.sendKeys(paymentData.get("cardNumber"));
+        cvcInput.sendKeys(paymentData.get("CVV"));
+        expirationMonthInput.sendKeys(paymentData.get("expirationMonth"));
+        expirationYearInput.sendKeys(paymentData.get("expirationYear"));
         payAndConfirmOrderButton.click();
         return this;
+
     }
 
     public WebElement getSuccessMessage() {
