@@ -78,59 +78,19 @@ pipeline {
     }
 
     post {
-        success {
+        always {
             emailext (
                 to: 'pratiksawant1496@gmail.com',
-                subject: "SUCCESS: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]'",
-                body: """Hello Team,
-
-                        The Jenkins build for ${env.JOB_NAME} #${env.BUILD_NUMBER} succeeded.
-
-                        Browser: ${params.BROWSER}
-                        Build details: ${env.BUILD_URL}
-
-                        👉 Allure Report: ${env.BUILD_URL}allure
-
-                        Regards,
-                        Jenkins
-                        """
-            )
-        }
-        failure {
-            emailext (
-                to: 'pratiksawant1496@gmail.com',
-                subject: "FAILURE: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]'",
-                body: """Hello Team,
-
-                        The Jenkins build for ${env.JOB_NAME} #${env.BUILD_NUMBER} failed.
-
-                        Browser: ${params.BROWSER}
-                        Logs: ${env.BUILD_URL}
-
-                        👉 Allure Report: ${env.BUILD_URL}allure
-
-                        Regards,
-                        Jenkins
-                        """
-            )
-        }
-        unstable {
-            emailext (
-                to: 'pratiksawant1496@gmail.com',
-                subject: "UNSTABLE: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]'",
-                body: """Hello Team,
-
-                    The Jenkins build for ${env.JOB_NAME} #${env.BUILD_NUMBER} is unstable.
-
-                    Browser: ${params.BROWSER}
-                    Build details: ${env.BUILD_URL}
-
-                    👉 Allure Report: ${env.BUILD_URL}allure
-
-                    Regards,
-                    Jenkins
-                    """
+                subject: "Build Result: ${env.JOB_NAME} #${env.BUILD_NUMBER} - ${currentBuild.currentResult}",
+                body: """<h3>Build Notification</h3>
+                         <p>Project: ${env.JOB_NAME}</p>
+                         <p>Build Number: ${env.BUILD_NUMBER}</p>
+                         <p>Status: <b>${currentBuild.currentResult}</b></p>
+                         <p>Browser: ${params.BROWSER}</p>
+                         <p>👉 <a href="${env.BUILD_URL}allure">View Allure Report</a></p>""",
+                mimeType: 'text/html'
             )
         }
     }
+
 }
