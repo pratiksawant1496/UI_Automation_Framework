@@ -16,7 +16,7 @@ https://www.automationexercise.com/test_cases
 The framework supports:
 - Automated functional UI test cases.
 - Cross-browser execution.
-- parallel execution
+- parallel execution with Selenium Grid
 - Reporting with detailed logs and test results.
 - CI/CD integration with Jenkins and Docker.
 
