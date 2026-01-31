@@ -16,13 +16,21 @@ The framework supports:
 
 ---
 
+##🎨 Project Design:
+Page Object Model
+Fluent Interface
+Data-Driven approach
+Behavior-Driven approach
+
+---
+
 ## 🛠️ Technologies Used
 - **Programming Language**: Java  
 - **Build Tool**: Maven  
 - **Testing Framework**: TestNG  
 - **Automation Tool**: Selenium WebDriver  
 - **Design Pattern**: Page Object Model (POM)  
-- **Reporting**: Extent Reports / Allure Reports (customizable)  
+- **Reporting**: Allure Reports (customizable)  
 - **CI/CD**: Jenkins (via `Jenkinsfile`)  
 - **Containerization**: Docker (`docker-compose.yaml`)  
 - **Version Control**: Git & GitHub  
@@ -92,6 +100,11 @@ mvn test -DsuiteXmlFile=testing.xml
 ```
 
 Reports will be generated automatically in the `reports/` folder.
+In order to generate Allure Report:
+
+Install Allure Commandline: npm install -g allure-commandline --save-dev
+
+Generate report: allure serve target/allure-results
 
 ---
 
