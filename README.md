@@ -80,16 +80,21 @@ This structure makes the framework easy to maintain and extend when new features
 ---
 
 ## 📊 Reporting
-The framework integrates with **Extent Reports** (or Allure Reports, depending on configuration):
+The framework integrates with **Allure Reports** 
 - Generates **HTML reports** with detailed test execution results.
 - Includes **screenshots** for failed test cases.
 - Provides **logs** for debugging and traceability.
 - Reports are stored in the `reports/` directory after execution.
 
+- In order to generate Allure Report:
+
+Install Allure Commandline: npm install -g allure-commandline --save-dev
+
+Generate report: allure serve target/allure-results
+
 Example report features:
 - Test case status (Pass/Fail/Skip).
 - Execution time.
-- Browser/environment details.
 - Visual charts for quick analysis.
 
 ---
@@ -113,13 +118,6 @@ Execute the TestNG suite:
 ```bash
 mvn test -DsuiteXmlFile=testing.xml
 ```
-
-Reports will be generated automatically in the `reports/` folder.
-In order to generate Allure Report:
-
-Install Allure Commandline: npm install -g allure-commandline --save-dev
-
-Generate report: allure serve target/allure-results
 
 ---
 
