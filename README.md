@@ -8,6 +8,11 @@ WebSite Home Page :
 
 <img width="1851" height="957" alt="image" src="https://github.com/user-attachments/assets/04e133b0-7082-4958-b54f-a437db1b5cd2" />
 
+Test Cases : 
+https://www.automationexercise.com/test_cases
+
+---
+
 The framework supports:
 - Automated functional UI test cases.
 - Cross-browser execution.
