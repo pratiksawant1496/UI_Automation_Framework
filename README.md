@@ -126,13 +126,13 @@ Generate report: allure serve target/allure-results
 - **testing.xml**: Defines which test classes to run.  
 - **pom.xml**: Contains dependencies (Selenium, TestNG, Extent Reports, etc.).  
 - **docker-compose.yaml**: Enables containerized test execution.  
-- **Jenkinsfile**: Automates test runs in CI/CD pipelines.  
+- **Jenkinsfile**: Automates test runs in CI/CD pipelines.
 
 ---
 
 ## 📊 CI/CD Integration
-- **Jenkins**: Pipeline defined in `Jenkinsfile` for automated builds and test execution.  
-- **Docker**: Supports containerized test environments for consistent execution.  
+- **Jenkins**: Pipeline defined in `Jenkinsfile` for automated builds and test exaecution.  
+- **Docker**: Supports containerized test environments for consistent execution. Also supports parallel execution with selenium grid 
 - **Reports**: Automatically published after test runs for easy access.  
 
  
