@@ -43,7 +43,8 @@ The framework supports:
 - **Build Tool**: Maven  
 - **Testing Framework**: TestNG  
 - **Automation Tool**: Selenium WebDriver  
-- **Design Pattern**: Page Object Model (POM)  
+- **Design Pattern**: Page Object Model (POM)
+- **DB**: MySQL
 - **Reporting**: Allure Reports (customizable)  
 - **CI/CD**: Jenkins (via `Jenkinsfile`)  
 - **Containerization**: Docker (`docker-compose.yaml`)  
