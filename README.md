@@ -11,17 +11,17 @@ WebSite Home Page :
 The framework supports:
 - Automated functional UI test cases.
 - Cross-browser execution.
+- parallel execution
 - Reporting with detailed logs and test results.
 - CI/CD integration with Jenkins and Docker.
 
 ---
 
 ##🎨 Project Design:
-Page Object Model
-Fluent Interface
-Data-Driven approach
-Behavior-Driven approach
-
+- Page Object Model
+- Fluent Interface
+- Data-Driven approach
+  
 ---
 
 ## 🛠️ Technologies Used
