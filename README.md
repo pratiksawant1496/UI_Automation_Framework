@@ -2,7 +2,10 @@
 # UI Automation Framework
 
 ## 📌 Overview
-This repository contains a **Java-based UI Automation Framework** designed for testing web applications. It provides a scalable and maintainable structure for writing automated UI tests, integrating with CI/CD pipelines, and supporting cross-browser execution.  
+The project was created to practice test automation skills using the Selenium (Java) framework, utilizing skills learned in a course on the Udemy platform. The website under test is a website specifically designed for automated testing. The project contains a total of 26 automated tests, created based on test cases defined by the site's developers. After running and executing the tests, using the proper command, a test report can be generated, which describes in detail the activities performed and the statuses of each test.
+
+<img width="1851" height="957" alt="image" src="https://github.com/user-attachments/assets/04e133b0-7082-4958-b54f-a437db1b5cd2" />
+
 
 The framework is built to:
 - Automate functional UI test cases.
