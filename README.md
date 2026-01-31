@@ -4,14 +4,15 @@
 ## 📌 Overview
 The project was created to practice test automation skills using the Selenium (Java) framework, utilizing skills learned in a course on the Udemy platform. The website under test is a website specifically designed for automated testing. The project contains a total of 26 automated tests, created based on test cases defined by the site's developers. After running and executing the tests, using the proper command, a test report can be generated, which describes in detail the activities performed and the statuses of each test.
 
+WebSite Home Page : 
+
 <img width="1851" height="957" alt="image" src="https://github.com/user-attachments/assets/04e133b0-7082-4958-b54f-a437db1b5cd2" />
 
-
-The framework is built to:
-- Automate functional UI test cases.
-- Support modular and reusable test design.
-- Integrate with Jenkins and Docker for CI/CD.
-- Provide easy configuration and extension for new test scenarios.
+The framework supports:
+- Automated functional UI test cases.
+- Cross-browser execution.
+- Reporting with detailed logs and test results.
+- CI/CD integration with Jenkins and Docker.
 
 ---
 
@@ -20,6 +21,8 @@ The framework is built to:
 - **Build Tool**: Maven  
 - **Testing Framework**: TestNG  
 - **Automation Tool**: Selenium WebDriver  
+- **Design Pattern**: Page Object Model (POM)  
+- **Reporting**: Extent Reports / Allure Reports (customizable)  
 - **CI/CD**: Jenkins (via `Jenkinsfile`)  
 - **Containerization**: Docker (`docker-compose.yaml`)  
 - **Version Control**: Git & GitHub  
@@ -30,13 +33,41 @@ The framework is built to:
 ```
 UI_Automation_Framework/
 │── src/test/           # Test classes and UI test cases
+│── src/main/java       # Page Objects, utilities, and core framework code
 │── pom.xml             # Maven dependencies and build configuration
 │── testing.xml         # TestNG suite configuration
 │── Jenkinsfile         # CI/CD pipeline definition
 │── docker-compose.yaml # Docker setup for test execution
+│── reports/            # Generated test reports
 │── .gitignore          # Ignored files
 │── README.md           # Project documentation
 ```
+
+---
+
+## 🎨 Design Pattern
+The framework follows the **Page Object Model (POM)** design pattern:
+- Each web page is represented as a **class**.
+- Page elements are defined as **variables**.
+- Actions on the page are implemented as **methods**.
+- Test classes interact with page objects, ensuring **separation of concerns** and **reusability**.
+
+This structure makes the framework easy to maintain and extend when new features or pages are added.
+
+---
+
+## 📊 Reporting
+The framework integrates with **Extent Reports** (or Allure Reports, depending on configuration):
+- Generates **HTML reports** with detailed test execution results.
+- Includes **screenshots** for failed test cases.
+- Provides **logs** for debugging and traceability.
+- Reports are stored in the `reports/` directory after execution.
+
+Example report features:
+- Test case status (Pass/Fail/Skip).
+- Execution time.
+- Browser/environment details.
+- Visual charts for quick analysis.
 
 ---
 
@@ -60,11 +91,13 @@ Execute the TestNG suite:
 mvn test -DsuiteXmlFile=testing.xml
 ```
 
+Reports will be generated automatically in the `reports/` folder.
+
 ---
 
 ## ⚙️ Configuration
 - **testing.xml**: Defines which test classes to run.  
-- **pom.xml**: Contains dependencies (Selenium, TestNG, etc.).  
+- **pom.xml**: Contains dependencies (Selenium, TestNG, Extent Reports, etc.).  
 - **docker-compose.yaml**: Enables containerized test execution.  
 - **Jenkinsfile**: Automates test runs in CI/CD pipelines.  
 
@@ -73,9 +106,6 @@ mvn test -DsuiteXmlFile=testing.xml
 ## 📊 CI/CD Integration
 - **Jenkins**: Pipeline defined in `Jenkinsfile` for automated builds and test execution.  
 - **Docker**: Supports containerized test environments for consistent execution.  
+- **Reports**: Automatically published after test runs for easy access.  
 
-
-
-✅ This README highlights **technologies used** and makes your framework look professional and ready for collaboration.  
-
-Would you like me to also add a **sample Selenium test case snippet** (like a login test) to the README so new users can quickly see how to write tests in your framework?
+ 
